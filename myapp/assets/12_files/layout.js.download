@@ -1,0 +1,810 @@
+$(document).ready(function() {
+
+	/* Variables
+	//////////////////////////////////////// */
+
+	var
+
+	// Select some DOM Elements
+	logo = document.querySelector('.xs-company-logo'),
+	companyName = document.querySelector('.xs-company-name'),
+	tagLine = document.querySelector('.xs-company-tagline'),
+	portraitImg = document.querySelector('.xs-profile-picture'),
+
+	primaryNav = document.querySelector('#xs-primary-nav .xs-primary-nav'),
+	sidePrimaryNav = document.querySelector('.xs-side-primary-nav'),
+	secondaryNav = document.querySelector('.xs-secondary-nav'),
+	altNav = document.querySelector('.xs-alt-nav'),
+
+	footerPhoneLink = document.querySelector('.xs-footer-phone'),
+	footerEmailLink = document.querySelector('.xs-footer-email'),
+
+	toggleNav = document.querySelector('.toggle-sidebar-menu'),
+
+
+	windowWidth = $(window).width(),
+
+	x, i,
+
+	// namespace object for navigation arrays and page content
+	XSITES = XSITES || {};
+
+    /* Some Functions
+    //////////////////////////////////////// */
+
+    // Create a generic DOM Element
+    var createEl = function(el, elText, elClass) {
+        var newEl = document.createElement(el);
+        if (elText) {newEl.textContent = elText;}
+        if (elClass) {newEl.className = elClass;}
+        
+        return newEl;
+    };// /makeElem()
+
+
+    // Copy Color style to parent element
+    // referenced in Company Name and Tagline
+    var copyColor = function(colorData, el) {
+        var colorStart = colorData.indexOf('color=') + 7;
+        var colorEnd = colorStart + 7;// returning a hex value
+        var color = colorData.slice(colorStart, colorEnd);
+        el.style.color = color;
+    };// /copyColor()
+
+
+    // Copy Font size to parent element
+    // referenced in Company Name and Tagline
+    var copyFontSize = function(fontData, el) {
+        var sizeStart = fontData.indexOf('size=') + 6;
+        var sizeEnd = sizeStart + 2;
+        var fontSize = fontData.slice(sizeStart, sizeEnd);
+        el.style.fontSize = fontSize + "px";
+    };// /copyFontSize()
+
+
+    // Copy Font Family/Face to parent element
+    // referenced in Company Name and Tagline
+    var copyFontFace = function(fontData, el) {
+        var faceStart = fontData.indexOf('face=') + 6;
+        var faceEnd = fontData.indexOf("'>");
+        var fontFace = fontData.slice(faceStart, faceEnd);
+        console.log(fontFace);
+        el.style.fontFamily = fontFace;
+    };// /copyFontFace()
+
+
+    // get just the text out of some html
+    // used here specifically for the <font> tags that xsites outputs from the wizard
+    var stripText = function(html) {
+       var tmp = document.createElement('div');
+       tmp.innerHTML = html;
+       return tmp.textContent || tmp.innerText || "";
+    };
+
+    // Smooth scrolling parallax for IE
+    if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+        $('body').on("mousewheel", function () {
+            // remove default behavior
+            event.preventDefault(); 
+
+            //scroll without smoothing
+            var wheelDelta = event.wheelDelta;
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+    }
+
+
+// add page content from strAccountData
+var renderPageContent = (function() {
+
+    'use strict';
+    
+    XSITES.pageContent = strAccountData[0];
+
+    // Get the Company Name Text with stripText() in functions.js
+    var companyNameText = decodeURIComponent(stripText(XSITES.pageContent.CompanyName));
+
+    // Add company Name
+    if ( XSITES.pageContent.DisplayCompName === 1 && companyName ) {
+        
+        if (companyName.classList) {
+            companyName.classList.add('xs-visible');
+        } else {
+            companyName.className += ' ' + 'xs-visible';
+        }
+
+        // Company Name Color
+        copyColor(XSITES.pageContent.CompanyName, companyName);
+
+        // Company name font size
+        copyFontSize(XSITES.pageContent.CompanyName, companyName);
+
+        // Company name font face/family
+        copyFontFace(XSITES.pageContent.CompanyName, companyName);
+
+        // if <b></b> Bold
+        if ( XSITES.pageContent.CompanyName.indexOf('</b>') > 0 ) {
+            companyName.style.fontWeight = "bold";
+        }
+
+        // if <i></i> Italic
+        if ( XSITES.pageContent.CompanyName.indexOf('</i>') > 0 ) {
+            companyName.style.fontStyle = "italic";
+        }
+
+        // if <u></u> Underline
+        if ( XSITES.pageContent.CompanyName.indexOf('</u>') > 0 ) {
+            companyName.style.textDecoration = "underline";
+        }
+
+        // companyName.innerHTML = decodeURIComponent(XSITES.pageContent.CompanyName).replace(/size=/g, 'data-size=').replace(/color=/g, 'data-color=');
+
+        companyName.innerHTML = companyNameText;
+    }
+
+    
+    // Company Motto/Tagline
+    if (XSITES.pageContent.CompanyTagline !== '' && tagLine ) {
+
+        if (tagLine.classList) {
+            tagLine.classList.add('show');
+        } else {
+            tagLine.className += ' ' + 'show';
+        }
+        
+        // Motto/Tagline Color
+        copyColor(XSITES.pageContent.CompanyTagline, tagLine);
+
+        // Company Motto/Tagline size
+        copyFontSize(XSITES.pageContent.CompanyTagline, tagLine);
+
+        // add Tagline
+        tagLine.innerHTML = decodeURIComponent(XSITES.pageContent.CompanyTagline).replace(/size=/g, 'data-size=').replace(/color=/g, 'data-color=');
+    }
+
+    // Get Company Logo URL
+    var companyLogoUrl = XSITES.pageContent.CompanyLogoURL;
+
+    // Company Logo
+    if ( XSITES.pageContent.DisplayLogo === 1 && logo && (/\.(gif|jp?g|tiff|png)$/i).test(XSITES.pageContent.CompanyLogoURL)) {
+        logo.setAttribute('alt', companyNameText + " Logo");
+        logo.setAttribute('src', companyLogoUrl);
+    } else if ( XSITES.pageContent.DisplayLogo === 0 && logo || !(/\.(gif|jp?g|tiff|png)$/i).test(XSITES.pageContent.CompanyLogoURL)) {
+        logo.style.display = 'none';
+    }
+
+    // Sidebar Photo/Portrait
+    if ( XSITES.pageContent.DisplayPortrait === 1 && portraitImg ) {
+        portraitImg.setAttribute('alt', companyNameText + " Portrait Photo");
+    } else if ( XSITES.pageContent.DisplayPortrait === 0 && portraitImg ) {
+        portraitImg.style.display = 'none';
+    }
+
+
+    // Footer Office Phone Button
+    if ( XSITES.pageContent.DisplayOfficePhone === true && XSITES.pageContent.Phone !== '' && footerPhoneLink ) {
+        var phoneText = document.createTextNode(XSITES.pageContent.Phone);
+        footerPhoneLink.appendChild(phoneText);
+        footerPhoneLink.setAttribute('href', 'tel:+1' + XSITES.pageContent.Phone);
+    } else if ( XSITES.pageContent.DisplayOfficePhone === false && footerPhoneLink ) {
+        footerPhoneLink.style.display = 'none';
+    }
+
+    // Footer Email Button
+    if ( XSITES.pageContent.DisplayPrimaryEmail === true && XSITES.pageContent.Email !== '' && footerEmailLink ) {
+        //var emailText = document.createTextNode(XSITES.pageContent.Email);
+        var emailAddress = document.querySelector('.xs-site-footer-email a').text;
+        var emailText = document.createTextNode(emailAddress);
+        footerEmailLink.appendChild(emailText);
+        //footerEmailLink.setAttribute('href', 'mailto:' + XSITES.pageContent.Email);
+        footerEmailLink.setAttribute('href', 'mailto:' + emailAddress);
+    } else if ( XSITES.pageContent.DisplayPrimaryEmail === false && footerEmailLink ) {
+        footerEmailLink.style.display = 'none';
+    }
+    
+}());// /renderPageItems() **immediately invoked**
+
+    // Create navigation listitems
+    var createListItem = function ( anchor ) {
+
+        'use strict';
+		if (!String.prototype.includes) {
+			String.prototype.includes = function (str) {
+				var returnValue = false;
+
+				if (this.indexOf(str) !== -1) {
+					returnValue = true;
+				}
+				return returnValue;
+			}
+		}
+        var page = anchor.PageIndex;
+
+        // create a <li>
+        var listItem = document.createElement('li');
+        listItem.setAttribute('data-page', page);
+
+        // if there's a link add the link
+        if ( anchor.PageURL ) {
+            var theLink = createEl('a', anchor.DisplayPageName);
+            theLink.setAttribute('href', anchor.PageURL.includes('http:') || anchor.PageURL.includes('https:') ? anchor.PageURL : '/' + anchor.PageURL);
+            listItem.appendChild(theLink);  
+        }
+
+        // if indented add 'indent' class
+        if ( anchor.Indent === true ) {
+            if (listItem.classList) {
+                listItem.classList.add('indent');
+            } else {
+                listItem.className += ' ' + 'indent';
+            }
+        }
+        
+        // add Sub Nav <ul class="sub-nav"> if menu HasChildren
+        if ( anchor.HasChildren !== 0 ) {
+            var elName = anchor.FileName.replace(/.x/g, '');
+            var subNav = document.createElement('ul');
+            subNav.setAttribute('id', 'sub-nav-' + elName);
+            subNav.className = 'sub-nav';
+
+            // add 'has-children' class to <li>
+            if (listItem.classList) {
+                listItem.classList.add('has-children');
+            } else {
+                listItem.className += ' ' + 'has-children';
+            }
+
+            // append the sub-nav <ul> to the <li>
+            listItem.appendChild(subNav);
+        }
+
+        // Connect the nested navigation to the parent
+        if ( anchor.Location == "Child" ) {
+            var parentName = anchor.Parent.replace(/.x/g, '');
+            listItem.setAttribute('data-parent', parentName);
+        }
+
+        return listItem;
+
+    };// /createListItem()
+
+
+    // Add primary navigation listitems to the ul
+    var createPrimaryNav = function () {
+        for ( i = 0, x = XSITES.collection.length; i < x; i++ ) {
+            primaryNav.appendChild( XSITES.collection[i] );
+        }
+    };// /createPrimaryNav()
+
+
+    // Add secondary navigation listitems to the ul
+    var createSecondaryNav = function () {        
+        for ( i = 0, x = XSITES.collection.length; i < x; i++ ) {
+            secondaryNav.appendChild( XSITES.collection[i] );
+        }
+        
+        // show secondary nav IF it has links
+        if ( XSITES.collection.length > 0 ) {
+            if (secondaryNav.classList) {
+                secondaryNav.classList.add('show');
+                toggleNav.classList.add('show');
+            } else {
+                secondaryNav.className += ' ' + 'show';
+                toggleNav.className += ' ' + 'show';
+            }
+        }
+    };// /createSecondaryNav()
+
+
+    // Add alt navigation listitems to the ul
+    var createAltNav = function () {
+        
+        for ( var i in XSITES.collection ) {
+            if (XSITES.collection.hasOwnProperty(i)) {
+                altNav.appendChild( XSITES.collection[i] );
+            }
+        }
+
+        // show secondary nav IF it has links
+        if ( XSITES.collection.length > 0 ) {
+            if (altNav.classList) {
+                altNav.classList.add('show');
+                toggleNav.classList.add('show');
+            } else {
+                altNav.className += ' ' + 'show';
+                toggleNav.className += ' ' + 'show';
+            }
+        }
+    };// /createAltNav()
+
+
+    // Add nested/child navigation listitems to the ul under the correct parent
+    var createChildNav = function () {
+        for ( i = 0, x = XSITES.collection.length; i < x; i++ ) {
+            var listElem = document.getElementById('sub-nav-' + XSITES.collection[i].getAttribute('data-parent'));
+            listElem && listElem.appendChild(XSITES.collection[i]);
+        }
+    };// /createChildNav()
+
+
+    // All organized content data
+    XSITES.organizedContent = {
+        primary: [],
+        secondary: [],
+        alt: [],
+        child: []
+    };
+
+
+    // Add navigation data to arrays based on location
+    for (i = 0, x = strPageData.length; i < x; i++ ) {
+        var locale = strPageData[i].Location.toLowerCase();
+        XSITES.organizedContent[locale].push( strPageData[i] );
+    }
+
+    
+    var buildNav = function ( target, location ) {
+        
+        XSITES.collection = [];
+        var anchor, page;
+
+        // Creates array of navigation objects with data
+        if (location == 'child') {
+        
+            for (i = 0, x = target.length; i < x; i++) {
+
+                anchor = target[i];
+                page = anchor.PageIndex;
+
+                // Add objects to array with data
+                XSITES.collection[i] = anchor;
+            } 
+        
+        } else {
+        
+            for (i = 0, x = target.length; i < x; i++) {
+
+                anchor = target[i];
+                page = anchor.PageIndex;
+                
+                // Add objects to array with data by page number order
+                XSITES.collection[page] = anchor;
+            }       
+        
+        } 
+
+        if (location == 'child') {
+            // Make list items of child navigation elements without spacers and with parent page data attached
+            for (i = 0, x = XSITES.collection.length; i < x; i++) {
+                if ( XSITES.collection[i] !== undefined ) {
+                    XSITES.collection[i] = createListItem(XSITES.collection[i]);
+                } 
+            }
+        } else if (location == 'alt') {
+            // Make list items of alt navigation elements without spacers
+            for (i = 0, x = XSITES.collection.length; i < x; i++) {
+                if ( XSITES.collection[i] !== undefined ) {
+                    XSITES.collection[i] = createListItem(XSITES.collection[i]);
+                } 
+            }
+
+            XSITES.collection.shift();
+        } else {
+            // Make list items of primary and secondary navigation elements with spacers
+            for (i = 1; i < XSITES.collection.length; i++) {
+                if ( XSITES.collection[i] === undefined ) {
+                    var spacer = document.createElement('li');
+                    spacer.className = 'spacer';
+
+                    XSITES.collection[i] = spacer;
+                } else {
+                    XSITES.collection[i] = createListItem(XSITES.collection[i]);
+                }
+            }
+
+            XSITES.collection.shift();
+        }  
+
+        // append the list item to the appropriate <ul>
+        if ( location == 'primary' && primaryNav ) {
+            createPrimaryNav();
+        } else if ( location == 'secondary'  && secondaryNav ){
+            createSecondaryNav();
+        } else if ( location == 'child' ) {
+            createChildNav();
+        } else if ( location == 'alt' && altNav ) {
+            createAltNav();
+        }
+
+    }; // /buildNav()
+
+
+    // Create arrays of data sorted by location
+    buildNav( XSITES.organizedContent.primary, 'primary' );
+    buildNav( XSITES.organizedContent.secondary, 'secondary' );
+    buildNav( XSITES.organizedContent.alt, 'alt' );
+    buildNav( XSITES.organizedContent.child, 'child' );
+
+
+
+// clone the Primary Navigation and append items to sidebar
+
+// get the Primary Nav links
+var primaryNavLis = document.querySelectorAll('#xs-primary-nav .xs-primary-nav li'),
+
+// document fragment to store the cloned links
+tempPrimaryNav = document.createDocumentFragment(),
+
+copyLi;
+
+// Append each of the <li> to the sidebar "primary" navigation
+for (i = 0, x = primaryNavLis.length; i < x; i++) {
+	copyLi = primaryNavLis[i].cloneNode(true);
+	tempPrimaryNav.appendChild(copyLi);
+}
+
+// Append document fragment to the sidebar primary nav <ul class="xs-side-primary-nav">
+sidePrimaryNav.appendChild(tempPrimaryNav);
+
+	// Toggle Sidebar
+
+	$('.toggle-sidebar-menu, .overlay').on('click', function() {
+		
+		$('html, .canvas, .overlay, .xs-sidebar').toggleClass('active');
+
+		// Scroll the sidebar back to the top
+		$('.xs-sidebar').scrollTop(0);
+	
+	});
+
+	$(window).on('resize load', function() {
+
+		// Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+        if ( $(window).width() !== windowWidth ) {
+
+            // Update the window width for next time
+            windowWidth = $(window).width();
+
+            $('html, .overlay, .canvas, .xs-sidebar').removeClass('active');
+
+            // Scroll the sidebar back to the top
+            $('.xs-sidebar').scrollTop(0);
+
+        }
+
+        // <table> Add Horizontally scrolling div container to tables
+        $('.xs-page-content td table').each(function() {
+
+            var $tableWidth = $(this).width(),
+
+                $hasTableScroll = $(this).parent('div').hasClass('tableScroll');
+
+                // Get the width of the parent element
+                $parentWidth = $(this).parent().width();
+
+            // IF there isn't already a <div> wrapping the table AND the table is wider than the <article>
+            if ( !$hasTableScroll && $tableWidth > $parentWidth ) {
+                $(this).wrap('<div class="tableScroll"></div>');
+
+            // OTHERWISE Remove the wrapping <div>
+            } else if ( $hasTableScroll && $tableWidth <= $parentWidth ) {
+                $(this).unwrap();
+            }
+        });// /tableScroll()
+
+	});// /window.on resize load()
+
+}); // /document.ready
+// Add wmode="transparent" to Flash Movies/YouTubes so's the sub-nav fly-outs can be viewed over them
+    
+    // https://helpx.adobe.com/flash/kb/flash-object-embed-tag-attributes.html#main_Browser_support_for_Window_Mode__wmode__values
+    $(function () {
+        $('object').each(function () {
+            var wrap, clone;
+            
+            wrap = $('<div>').addClass('embed-wrapper');
+            
+            clone = $(this).clone();
+            clone.append(
+                $('<param>').attr({
+                    name: 'wmode',
+                    value: 'transparent'
+                })
+            ).find('embed').attr('wmode', 'transparent');
+    
+            $(this).before( wrap.append(clone) );
+            $(this).remove();
+        });
+
+        $('iframe[src*="youtube"]').each(function () {
+            var src = $(this).attr('src');
+
+            src += (src.match(/\?/g) ? '&' : '?' ) + "wmode=transparent";
+            
+            $(this).attr({
+                src: src,
+                wmode: "Opaque"
+            });
+        });
+    });
+/**
+ * Sticky footer bar for lead capture
+ */
+
+
+/**
+ * Validation JS
+ *
+ * @author Cassie Koelsch
+ * @options
+ *     success: function(){},
+ *     failure: function(){},
+ *     emails: [],
+ *     required: []
+ */
+$(function() {
+    $.fn.validation = function(options) {
+
+        var settings = $.extend({
+            success: function() {},
+            failure: function() {},
+            emails: [],
+            required: []
+        }, options);
+
+        return this.each(function() {
+
+            var Methods = {
+                /**
+                 * Array containing all form errors
+                 *
+                 *
+                 */
+
+                errors: [],
+                /**
+                 * Check for valid email address in required field
+                 *
+                 * @prams
+                 *      form: form being validated,
+                 *      fields: each field that is validated (input, textarea, etc.)
+                 */
+                validateEmail: function(form, fields) {
+                    fields.each(function() {
+                        var emailRegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+
+                        // Here is where i do the magic tricks
+                        if (!emailRegExp.test($(this).val())) {
+                            var id = $(this).attr('id');
+                            var label = $(form).find('label[for=' + id + ']');
+
+                            $(this).addClass('error');
+                            $(label).addClass('error');
+                            $(this).tooltip('show');
+
+                            Methods.errors.push({
+                                label: $(label),
+                                field: $(this)
+                            });
+                        } else {
+                            $(this).tooltip('hide');
+                        }
+                    });
+                },
+
+                /**
+                 * Check for input in required field
+                 *
+                 * @prams
+                 *      form: form being validated,
+                 *      fields: each field that is validated (input, textarea, etc.)
+                 */
+                validateRequired: function(form, fields) {
+                    fields.each(function() {
+                        if ($(this).is(':checkbox')) {
+                            Methods.validateChecked(form, $(this));
+                        }
+
+                        if (!$(this).val()) {
+
+                            var id = $(this).attr('id');
+                            var label = $(form).find('label[for=' + id + ']');
+
+                            $(this).addClass('error');
+                            $(label).addClass('error');
+                            $(this).tooltip('show');
+
+                            Methods.errors.push({
+                                label: $(label),
+                                field: $(this)
+                            });
+                        } else if (!$(this).hasClass('error')) {
+                            $(this).tooltip('hide');
+                        }
+                    });
+                },
+                /**
+                 * Check for checked checkbox if checkbox is required
+                 *
+                 * @prams
+                 *      form: form being validated,
+                 *      field: the checkbox field that is being validated
+                 */
+                validateChecked: function(form, field) {
+                    if (!field.prop('checked')) {
+
+                        var id = field.attr('id');
+                        var label = $(form).find('label[for=' + id + ']');
+
+                        field.addClass('error');
+                        $(label).addClass('error');
+                        $(this).tooltip('show');
+
+                        Methods.errors.push({
+                            label: $(label),
+                            field: field
+                        });
+                    } else {
+                        $(this).tooltip('hide');
+                    }
+                },
+                validateNoBot: function () {
+                    if (document.getElementById("SF_txtConfirm").value != "") {
+                        Methods.errors.push({
+                            label: "Bot",
+                            field: "IsBot"
+                        });
+                    }
+                },
+                /**
+                 * Reset errors on each submit
+                 *
+                 * @prams
+                 *      form: form being validated
+                 */
+                reset: function(form) {
+                    this.errors = Methods.errors = [];
+                    form.find('.error').removeClass('error');
+                },
+                /**
+                 * Return true if form has no errors
+                 *
+                 *
+                 */
+                isValid: function() {
+                    return (Methods.errors.length == 0)
+                }
+            }
+
+            $(this).attr('novalidate', true).on('submit', function(e) {
+                var emailFields = $('[required][type=email]').add(settings.emails);
+                var requiredFields = $('[required]').add(settings.required);
+
+                Methods.reset($(this));
+                Methods.validateEmail($(this), $(this).find(emailFields));
+                Methods.validateRequired($(this), $(this).find(requiredFields));
+                Methods.validateNoBot();
+
+                //If form is valid, call success function or if form is not valid call failure function
+                Methods.isValid() && settings.success({
+                    form: $(this),
+                    event: e
+                }) || !Methods.isValid() && settings.failure({
+                    form: $(this),
+                    event: e,
+                    errors: Methods.errors
+                })
+            })
+        });
+    }
+}(jQuery));
+
+function getFilename() {
+                var pathArray = window.location.pathname.split('/');
+                return pathArray[1];
+            }
+
+
+            //Call the validation function and send input to AJAX Call
+            $('#lead-form').validation({
+                failure: function(data) {
+                    data.event.preventDefault();
+                },
+                success: function(data) {
+                    data.event.preventDefault();
+                    var filename = getFilename() === ""?"Home":getFilename();
+                    console.log(filename);
+                    //AJAX Call Here 
+                    $.ajax({
+                        url: "/admin/wizard/ajax/request.aspx?application=CaptureLead",
+                        method: "POST",
+                        cache: false,
+                        data: {"pageName": filename, "name": $('#inputName').val(), "email": $('#inputEmail').val(), "question": $('#inputQuestion').val() },
+                        success: function(msg) {
+                            //On success hide the form and show a thank you message
+                            $('#lead-form').hide();
+                            $('.sticky-footer').css("height", "55px");
+                            $('.submit-message').fadeIn('slow');
+                            setTimeout(function() {
+                                $('.sticky-footer').fadeOut();
+                            }, 5000);
+                            setCookie("completedFooter", true, 1);
+                        },
+                        error: function(msg) {
+                            alert("There was an error submitting your message. Please try again later.");
+                            console.log(JSON.stringify(msg));
+                        }
+                    });
+
+        
+                }
+
+            });
+
+
+//Expands the sticky footer on mobile devices 
+$(".expand").toggle(function() {
+    if ($(window).width() < 768) {
+        $('.sticky-footer').animate({
+            height: '260px',
+        });
+    }
+}, function() {
+    $('[data-toggle="tooltip"]').tooltip('hide');
+    if ($(window).width() < 768) {
+        $('.sticky-footer').animate({
+            height: '55px',
+        });
+    }
+});
+
+$(window).resize(function() {
+    $('[data-toggle="tooltip"]').tooltip("hide");
+    $('.sticky-footer').css("height", "55px");
+});
+
+
+//Set Cookie after submit
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+//Check for cookie and hide
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+if (getCookie("completedFooter")) {
+    //hide sticky footer 
+    $('.sticky-footer').css("display", "none");
+}
+
+
+
+
+ //override bootstrap table cellspacing for legacy tables :'(
+ 	$(function () {
+        $('.xs-legacy-content table[cellspacing]').each(function() {
+           var space = $(this).attr('cellspacing') + 'px';
+           $(this).css('border-spacing', space);
+           $(this).css('border-collapse', 'separate');
+        });
+    });
+//# sourceMappingURL=layout.js.map

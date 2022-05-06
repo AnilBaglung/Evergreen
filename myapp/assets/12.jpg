@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)https://reasinc.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+
+        <!-- Always force latest IE rendering engine -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Real Estate Appraisal - home appraisal - appraiser - real estate appraiser - residential appraisals - Hickory, NC - Real Estate Advisory Services, Inc.</title>
+        
+        <meta name="keywords" content="Real estate - appraisal - commercial - residential - appraisers">
+        <meta name="description" content="Real Estate Advisory Services, Inc. specializing in residential and commercial NC Real Estate Property Appraisals.">
+        
+
+        <link href="./12_files/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Layout CSS -->
+        <link href="./12_files/layout.min.css" rel="stylesheet">
+
+        <!--[if lte IE 9]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+                
+        <style type="text/css" nonce="">
+            body {
+                /*background-color: ;
+                background-image: url();*/
+
+                background-color: #35213A;
+            }
+
+            .theme-header-bg-color,
+            .xs-dynamic-content,
+            .panel-primary>.panel-heading {
+                background-color: #161616;
+            }
+
+            .panel-primary>.panel-heading {
+                border-color: #161616;
+            }
+
+            .panel-primary {
+                border-color: #161616;
+            }
+
+            .xs-lead-form-viewer .btn-primary, .xs-lead-form-viewer .btn-primary:hover, .xs-lead-form-viewer .btn-primary:active, .xs-lead-form-viewer .btn-primary:focus {
+                background-color: #35213A;
+                border-color: #35213A;
+                color: #ffffff;
+            }
+
+            .theme-footer-bg-color, .xs-company-tagline {
+                background-color: #191919;
+            }
+
+            .theme-footer-bg-color, .theme-footer-bg-color a {
+                color: white;
+            }
+            
+            .theme-side-nav-bg-color {
+                background-color: #35213A;
+            }
+
+            #ctl04_pnlRSSFeeds {
+                border-color: #35213A;
+            }
+
+            /* Primary Navigation Link Styles */
+            #xs-primary-nav a {
+                font-family: Arial;
+                font-size: 10px;
+                color: #FFFFFF;
+
+                
+            }
+            
+            /* Secondary Navigation Link Styles */
+            .xs-sidebar a {
+                font-family: Arial;
+                font-size: 10px;
+                color: #FFFFFF;
+
+                
+            }
+
+            /* Footer */
+            .xs-site-footer {
+                background-color: #191919;
+                color: white;
+            }
+        </style>
+
+        
+        
+        
+    </head>
+    
+    <!--[if IE 9 ]>
+        <body id="home" class="xs-body ie-9">
+    <![endif]-->
+    <!--[if !IE]>-->
+       <body id="home" class="xs-body">
+    <!--<![endif]-->
+
+        <div class="canvas">
+
+            <header class="xs-header">
+                <nav class="navbar navbar-inverse navbar-static-top theme-header-bg-color" role="navigation">
+                    <a href="https://reasinc.com/" class="xs-company-logo-link">
+                        <img src="./12_files/logo47682.jpg" alt="Real Estate Advisory Services, Inc Logo" class="xs-company-logo">
+                    </a>
+
+                    <a href="https://reasinc.com/" class="xs-company-name xs-visible" style="color: rgb(0, 0, 0); font-size: 20px; font-family: Tahoma; font-weight: bold;">Real Estate Advisory Services, Inc</a>
+
+                    <div id="xs-primary-nav">
+                        <ul class="nav navbar-nav xs-primary-nav"><li data-page="1"><a href="https://reasinc.com/Home">Home</a></li><li data-page="2"><a href="https://reasinc.com/OrderanAppraisal">Order an Appraisal</a></li><li data-page="3"><a href="https://reasinc.com/ClientLogin">Client Login</a></li><li data-page="4"><a href="https://reasinc.com/RealEstateServices">Real Estate Services</a></li></ul>
+                    </div>
+
+                    <!-- Toggle Sidebar -->
+                    <button type="button" class="btn navbar-btn toggle-sidebar-menu show">
+                        <span>Menu</span>
+                    </button>
+                </nav>
+                
+                <div class="xs-company-tagline"></div>
+            </header>
+        
+            <main class="xs-primary-content">
+
+<link rel="stylesheet" href="./12_files/jquery-ui.css">
+<style type="text/css" media="screen" nonce="">
+.ui-dialog .ui-dialog-content {
+    -ms-overflow-style: scrollbar;
+}
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-widget {
+    font-size: 1em;
+}
+
+.ui-widget-content {
+    border: none;
+    background: transparent;
+}
+#dialog .panel-body {
+    overflow: auto;
+    max-height: 70vh;
+}
+.blur {
+    opacity: 0.1; 
+}
+html.doorway {
+    overflow: hidden;
+    -ms-overflow-style:none;
+    /*position: fixed;*/
+ }
+</style>
+
+
+<div id="divContent" class="xs-default-aspx xs-legacy">
+    
+    
+
+<style type="text/css" nonce="">
+    .xs-dynamic-content-manager 
+    {
+        width: 100%;
+        border-spacing: 0;
+    }
+    .xs-page-content
+    {
+        vertical-align: top;
+    }
+    .xs-page-content-inner 
+    {
+        padding: 5px;
+    }
+    
+    .xs-dynamic-content
+    {
+        width: 192px;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    .xs-dynamic-content-inner
+    {
+        border-left: 1px solid;
+        white-space: normal;
+        padding: 5px;
+    }
+    
+    .xs-dynamic-content-inner table
+    {
+        margin: auto;
+    }
+    
+    .clearfix
+    {
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+        zoom: 1;
+    }
+    
+    .dynamic-content-title
+    {
+        font-weight: bold;
+        margin: 1em;
+        text-align: center;
+    }
+    
+    .dynamic-content-separator
+    {
+        margin: 1em 0 1em 0;
+        border: none;
+        border-top: 1px solid;
+        height: 2px;
+        display: block;
+    }
+    footer .clearfix
+    {
+        visibility: visible;
+        height:auto;
+    }
+</style>
+    
+    <div class="xs-dynamic-content-manager">
+
+        <table class="xs-page-content">
+            <tbody><tr>
+                <td>
+                    <div>
+                        <style type="text/css">
+    .xs-page-content tbody tr td > div { width: auto; padding: 0; margin: 0; }
+    .xs-primary-content { padding-top: 0; }
+    .col-sm-12 {
+        padding: 0px;
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-weight: 300;
+        line-height: 1.1;
+        color: inherit;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .xs-site-container {
+        padding: 50px;
+        width: 100%;
+        clear: both;
+        background-size: cover;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .background-primary {
+        background-color: #35213A;
+        color: #ffffff;
+    }
+    .xs-site-container a, .xs-page-content a {
+        text-decoration: none;
+    }
+    .xs-page-content .btn, .xs-site-container .btn {
+        margin: 0px;
+        font-size: 15px;
+        border-radius: 0;
+        outline: none;
+    }
+    .xs-page-content .btn:hover, .xs-site-container .btn:hover {
+        transition: all .2s ease-in-out;
+    }
+    .xs-site-container .btn-xl {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+    .xs-site-container .btn-primary {
+        background: #422A48;
+        border-color: #402A46;
+        color:#FFFFFF;
+        box-shadow:0 1px 2px rgba(0,0,0,.3);
+    }
+    .xs-site-container .btn-primary:hover, .xs-site-container .btn-primary:focus, .xs-site-container .btn-primary:active, .xs-site-container .btn-primary.active, .open .dropdown-toggle.btn-primary {
+        background-color: #6c3e72;
+        border-color: #6c3e72;
+    }
+    .xs-site-container .btn-info {
+        background: #422A48;
+        border-color: #402A46;
+        color:#ffffff;
+        box-shadow:0 1px 2px rgba(0,0,0,.3);
+    }
+    .xs-site-container .btn-info:hover, .xs-site-container .btn-info:focus, .xs-site-container .btn-info:active, .xs-site-container  .btn-info.active, .open .dropdown-toggle.btn-info {
+        background-color: #6c3e72;
+        border-color: #6c3e72;
+    }
+    .xs-site-container .btn-glossy {
+        border:1px solid rgba(0,0,0,.09);
+        border-bottom-color:rgba(0,0,0,.2);
+        text-shadow:0 1px 0 rgba(0,0,1,.2);
+        box-shadow: 0 1px 3px rgba(0,0,1,.35), inset 0 1px 0 0 rgba(255,255,255,.4), inset 0 1px 0 2px rgba(255,255,255,.08);
+        background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+        background-image: -o-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+        background-image: linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+        color: #fff;
+    }
+    .xs-site-container .btn-glossy:hover, .btn-glossy:active, .btn-glossy:focus {
+        opacity: .8;
+        color: #fff;
+    }
+    .homepage-headline {
+        font-size: 4rem;
+        font-weight: 300;
+        margin-top: 0px;
+    }
+    div#divContent {
+        padding-top: 0;
+    }
+    .xs-footer-buttons .btn {
+        background: rgba(0,0,0,.125);
+        border-color: #fff;
+        color: #fff;
+        box-shadow: 0 1px 0 rgba(0,0,0,.675);
+    }
+    .hero-image {
+        background-image: url(/graphics/StockBackgrounds/customerfocus/IS_74727279.jpg); /* header-image */
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 200px;
+        margin-bottom: 1em;
+    }
+    .xs-profile-picture {
+        background-image: url(/xSites/Appraisers/reasinc/portrait54006.JPG); /* portrait-image */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid white;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.375);
+        float: left;
+        margin: 0 15px 5px 0; 
+        height: 72px;
+        width: 72px;
+    }
+    @media (min-width: 768px) {
+        .xs-profile-picture { }
+        .hero-image {
+            height: 300px;
+            margin-bottom: 0;
+        }
+    }
+</style><div class="fr-view"><div class="xs-site-container background-primary xs-no-edit" data-theme="customerfocus"><div class="container xs-no-edit"><div class="row xs-no-edit"><div class="col-sm-6 col-sm-push-6 xs-no-edit"><div class="hero-image xs-hero-image" data-tooltip="You can change your website header image in Step 2 of the Wizard. Click &#39;Theme Prefs&#39; on the left-hand column of the Wizard to navigate to Step 2."><br></div></div><div class="col-sm-6 col-sm-pull-6 xs-no-edit" style=""><h1 class="homepage-headline xs-editable">Real Estate Advisory Services, Inc.</h1><p class="shadow xs-no-edit"><br></p><span><div class="img-circle xs-profile-picture xs-no-edit" data-tooltip="You can change your profile picture in Step 2 of the Wizard. Click &#39;Theme Prefs&#39; on the left-hand column of the Wizard to navigate to Step 2." alt="Real Estate Advisory Services, Inc Portrait Photo"><br></div></span>
+<span class="xs-editable">&nbsp;For years, mortgage lenders and consumers have relied on our expertise to provide high-quality valuations on a wide variety of real estate in the Catawba Valley Area. By continuously keeping up with local real estate trends in Catawba and surrounding counties and staying current on valuation techniques through accredited courses, we've been consistently able to deliver reliable home valuations for people just like you.&nbsp;</span>
+<p><br></p><p class="shadow xs-no-edit"><span class="xs-editable">Call us today at</span>
+<a class="xs-editable" href="tel:+1(828)%20466-5037">(828) 466-5037</a>. <br>
+<br>
+<a class="btn btn-lg btn-primary xs-editable" href="https://reasinc.com/faq">Frequently Asked Questions</a></p></div></div><!-- /.row --></div><!-- /.container --></div><div class="xs-site-container"><div class="container"><div class="row"><!-- begin xs-original-user-content -->
+<div class="col-md-12 xs-edit-content"><p>&nbsp;Welcome to our home page! We are a leading provider of real estate valuations in the Catawba Valley and surrounding areas. With a combined <u><strong>200 years&nbsp;</strong></u>of experience in the business, we have a proven track record of reducing time, effort and costs in managing the appraisal process.</p><p>We are a leading provider of appraisals for:</p><ul><li>Primary and secondary mortgages</li><li>Mortgage refinancing and home equity</li><li>Employee relocation</li><li>Private mortgage insurance removal</li><li>Estate planning</li><li>Divorce settlement</li><li>Commercial valuations</li></ul><p>Our investment in training and technology has made our firm a highly respected evaluation team. We offer online appraisal ordering, coupled with automatic report status updates and electronic delivery of the final product, thus eliminating the run around and phone tag hassles associated with this process. And since this saves us money as well, we can keep our rates competitive with anybody in the industry.</p><ul><li>Short turn-around times</li><li>Highest quality appraisal reports</li><li>Online status reports</li><li>Electronic ordering and delivery</li><li>Competitive pricing</li></ul><p>Through this website, you can perform a number of tasks. Ordering an appraisal is just a click away. Or, spend some time and find out a bit more about the appraisal business. The more you know, the better decision you can make. And check back frequently, as our content is always being updated. <br><br></p></div>
+<!-- end xs-original-user-content -->
+<!-- end xs-original-user-content --></div></div></div><div class="xs-site-container background-primary xs-no-edit"><div class="container xs-site-container-xl xs-no-edit"><div class="row xs-no-edit"><div class="text-center xs-no-edit"><a class="btn btn-xl btn-info btn-glossy xs-editable" href="https://reasinc.com/orderanappraisal">Order An Appraisal Online</a></div></div></div></div></div>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+
+    
+        
+     
+    </div>
+
+<div style="width:100%;height:30px;"></div>
+    <div>
+        
+    </div>
+    
+</div>
+<div id="divIDXSearch" style="display:none;">
+    <iframe id="frameIDXSearch" style="width:100%; height:1300px;" marginwidth="0" marginheight="0" frameborder="0" src="./12_files/saved_resource.html"></iframe>
+    <div>
+        
+    </div>
+    
+</div>
+<div>
+    
+</div>
+
+
+            </main>
+
+            
+            <!-- Sidebar Navigation -->
+            <aside class="xs-sidebar theme-side-nav-bg-color font-header" id="xs-sidebar">
+                <!-- Toggle Sidebar -->
+                <button type="button" class="btn navbar-btn toggle-sidebar-menu toggle-close">
+                    <span>Close</span>
+                </button>
+                
+                <nav>
+                    <ul class="xs-side-primary-nav"><li data-page="1"><a href="https://reasinc.com/Home">Home</a></li><li data-page="2"><a href="https://reasinc.com/OrderanAppraisal">Order an Appraisal</a></li><li data-page="3"><a href="https://reasinc.com/ClientLogin">Client Login</a></li><li data-page="4"><a href="https://reasinc.com/RealEstateServices">Real Estate Services</a></li></ul>
+                    <ul class="xs-secondary-nav show"><li data-page="1"><a href="https://reasinc.com/GlossaryofTerms">Glossary of Terms</a></li><li data-page="2"><a href="https://reasinc.com/OurServiceArea">Our Service Area</a></li><li data-page="3" class="has-children"><a href="https://reasinc.com/Appraiserethics">Appraiser ethics</a><ul id="sub-nav-Ethics" class="sub-nav"><li data-page="1" data-parent="Ethics"><a href="https://reasinc.com/Appraiserlicensing">Appraiser licensing</a></li><li data-page="2" data-parent="Ethics"><a href="https://reasinc.com/AppraisalMyths">Appraisal Myths</a></li></ul></li><li data-page="4" class="has-children"><a href="https://reasinc.com/MortgageCalculators">Mortgage Calculators</a><ul id="sub-nav-MortgageCalculator" class="sub-nav"><li data-page="1" data-parent="MortgageCalculator"><a href="https://reasinc.com/FHAApproved">FHA Approved</a></li></ul></li><li data-page="5"><a href="https://reasinc.com/InspectionReportTips">Inspection Report Tips</a></li><li data-page="6" class="has-children"><a href="https://reasinc.com/EstateAppraisals">Estate Appraisals</a><ul id="sub-nav-estate" class="sub-nav"><li data-page="1" data-parent="estate"><a href="https://reasinc.com/DateofDeathValuations">Date of Death Valuations</a></li></ul></li><li data-page="7"><a href="https://reasinc.com/Foreclosure/REOAppraisal">Foreclosure/REO Appraisal</a></li><li data-page="8"><a href="https://reasinc.com/MfgvsModularHomes">Mfg vs Modular Homes</a></li><li data-page="9"><a href="https://reasinc.com/OurTechnology">Our Technology</a></li><li data-page="10"><a href="https://reasinc.com/WhygetanAppraisal">Why get an Appraisal</a></li><li class="spacer"></li><li class="spacer"></li><li data-page="13"><a href="https://reasinc.com/StaffProfiles">Staff Profiles</a></li><li data-page="14"><a href="https://reasinc.com/PressRelease">Press Release</a></li><li data-page="15"><a href="https://reasinc.com/PrivacyProcedures">REAS Privacy Policy</a></li><li class="spacer"></li><li data-page="17"><a href="https://reasinc.com/reastermsofuse">REAS Terms of Use</a></li><li data-page="18"><a href="https://reasinc.com/socialmediaguidelines">Social Media Guidelines</a></li><li data-page="19"><a href="https://reasinc.com/thirdpartysites">Third Party Sites</a></li></ul>
+                    <ul class="xs-alt-nav show"><li data-page="22"><a href="https://reasinc.com/DownloadAdobeAcrobat">Download Adobe Acrobat</a></li></ul>
+                </nav>
+            </aside><!-- /.xs-sidebar -->
+
+            <footer class="xs-site-footer theme-footer-bg-color">
+                <!-- 
+    <div class="xs-language-options text-center">
+	    <label>Choose your language:</label> <br>
+	    
+		    <a href="?ChosenLanguage=English" title="English">English</a> 
+	    
+		    <a href="?ChosenLanguage=Spanish" title="Spanish">Spanish</a> 
+	    
+    </div>
+ -->
+                
+                <p class="xs-footer-buttons text-center">
+                    <a href="tel:+1(828) 466-5037" class="btn btn-primary xs-footer-phone"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(828) 466-5037</a>
+                    <a href="mailto:mwarren@reasinc.com" class="btn btn-primary xs-footer-email" id="b35">mwarren@reasinc.com
+</a>
+                </p>
+                
+                
+
+<div class="xs-footer-text">&nbsp;<img src="./12_files/FDIC-white.png" width="167" height="113"><img src="./12_files/EHO-white.png" width="99" height="118"><img src="./12_files/realtor-mls-white.png" style=""><br>Real Estate Advisory Services, Inc. is a wholly owned subsidiary of Peoples Bank.<br><style>
+    #topFlashNav {
+        background-image: url(https://reasinc.appraiserxsites.com/xSites/Appraisers/reasinc/Content/UploadedFiles/photo.jpg)
+    } </style></div><br><div class="tableText" style="text-align: center;"><div class="xs-site-footer-company"><span class="xs-site-footer-company-name">Real Estate Advisory Services, Inc.</span> <span class="xs-site-footer-company-address">2050 Catawba Valley Blvd SE, 2nd Floor  Hickory, NC 28602</span></div><div class="xs-site-footer-contact-info"><span class="xs-site-footer-office-phone">Phone: <script language="javascript" nonce=""> document.write('(828) 466-5037');</script>(828) 466-5037</span> <span class="xs-site-footer-office-fax">Fax: <script language="javascript" nonce=""> document.write('(828) 466-5039');</script>(828) 466-5039</span> <span class="xs-site-footer-email">E-mail: <a href="mailto:mwarren@reasinc.com" id="b36">mwarren@reasinc.com
+</a></span></div><div class="xs-site-footer-site-navigation"><a href="https://reasinc.com/PrivacyProcedures"><span style="white-space: nowrap;">REAS Privacy Policy</span></a> | <a href="https://reasinc.com/reastermsofuse"><span style="white-space: nowrap;">REAS Terms of Use</span></a> | <a href="https://reasinc.com/thirdpartysites"><span style="white-space: nowrap;">Third Party Sites</span></a> | <a href="https://reasinc.com/socialmediaguidelines"><span style="white-space: nowrap;">Social Media Guidelines</span></a></div><br><div class="xs-site-footer-copyright">Copyright © 2022 Real Estate Advisory Services, Inc.<br>Portions Copyright © 2022 a la mode, inc.<br>Another website by <a href="https://www.alamode.com/" target="_blank">a la mode, inc.</a> | <a href="https://reasinc.com/TermsOfUse">Terms of Use</a> | <a href="https://reasinc.com/SiteMap">Site Map</a></div></div><meta id="cy01" data-key="DPD4" class="Crypto"><meta id="cy02" data-key="IY1V" class="Crypto"><meta id="cy03" data-key="M3ZP" class="Crypto"><meta id="cy04" data-key="5923" class="Crypto"><meta id="cy05" data-key="YL0W" class="Crypto"><meta id="cy06" data-key="YBQV" class="Crypto"><meta id="cy07" data-key="D70J" class="Crypto"><meta id="cy08" data-key="BM7I" class="Crypto"><meta id="cy09" data-key="20GW" class="Crypto"><meta id="cy10" data-key="YKZU" class="Crypto"><meta id="cykey" data-key="D70JYBQVIY1VYKZU20GWDPD4M3ZPYL0WBM7I5923">
+
+
+<script src="./12_files/decrypt.min.js.download" type="text/javascript"></script>
+            <script type="text/javascript" nonce="">
+
+                // Check to see this is a page with encryption
+
+
+                function validateEmail(email) {
+                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                    return re.test(email); 
+                }
+
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    CheckForJquery();
+                    function CheckForJquery() {
+                        if (!window.jQuery) {
+                            var jq = document.createElement('script');
+                            jq.type = 'text/javascript';
+                            jq.src = '/scripts/jquery-1.8.3.min.js';
+                            document.getElementsByTagName('head')[0].appendChild(jq);
+                            window.setTimeout(CheckForJquery,1000);
+                            
+                        } else {
+
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/scripts/key.aspx",
+                                data: "",
+                                dataType: "text",
+                                success: function(data) {
+                                    if (document.getElementById("cykey") != null) {
+
+                                        var Correctkeys = data.split(','),
+                                            MetaKeys = document.querySelectorAll('.crypto'),
+                                            ValidKey = document.getElementById("cykey"),
+                                            TempKey = "",
+                                            s = "",
+                                            keyname = "";
+
+                                        // iterate through the meta tags containing the randomized encrypted key pieces
+                                        for (var i = 0; i < Correctkeys.length; i++) {
+
+                                            keyname = Correctkeys[i];
+                                            TempKey = document.getElementById(keyname);
+                                            s = ValidKey.getAttribute("data-key");
+                                            if (TempKey != null) {
+                                                var newkey = s.concat(TempKey.getAttribute('data-key'));
+                                                ValidKey.setAttribute('data-key', newkey);
+                                            }
+                                        }
+                                        decrypt();
+
+                                    }
+                                }
+                            })
+                        }
+                    }
+
+                });
+
+            </script>
+
+
+            </footer>
+            
+            <div class="overlay"></div>
+        
+        </div><!-- /.canvas -->
+
+        <script nonce="">
+            window.jQuery || document.write("<script src='/scripts/jquery-1.8.3.min.js'>\x3C/script><script src='/scripts/bootstrap.min.js'>\x3C/script>")
+        </script><script src="./12_files/jquery-1.8.3.min.js.download"></script><script src="./12_files/bootstrap.min.js.download"></script>
+
+        
+        <!-- JavaScript(s) -->
+        <script nonce="">
+            var strPageData = [{"DisplayPageName":"Download Adobe Acrobat","PageURL":"DownloadAdobeAcrobat","Parent":"0","Location":"Alt","PageIndex":22,"FileName":"downloadadobe.x","AWSAccountPageId":31309413,"HasChildren":0,"Indent":false},{"DisplayPageName":"Home","PageURL":"Home","Parent":"0","Location":"Primary","PageIndex":1,"FileName":"HomePage.x","AWSAccountPageId":31997953,"HasChildren":0,"Indent":false},{"DisplayPageName":"Order an Appraisal","PageURL":"OrderanAppraisal","Parent":"0","Location":"Primary","PageIndex":2,"FileName":"order.x","AWSAccountPageId":31309408,"HasChildren":0,"Indent":false},{"DisplayPageName":"Client Login","PageURL":"ClientLogin","Parent":"0","Location":"Primary","PageIndex":3,"FileName":"client.x","AWSAccountPageId":31309409,"HasChildren":0,"Indent":false},{"DisplayPageName":"Real Estate Services","PageURL":"RealEstateServices","Parent":"0","Location":"Primary","PageIndex":4,"FileName":"CustomPage0.x","AWSAccountPageId":31309411,"HasChildren":0,"Indent":false},{"DisplayPageName":"Glossary of Terms","PageURL":"GlossaryofTerms","Parent":"0","Location":"Secondary","PageIndex":1,"FileName":"terms.x","AWSAccountPageId":31309394,"HasChildren":0,"Indent":false},{"DisplayPageName":"Our Service Area","PageURL":"OurServiceArea","Parent":"0","Location":"Secondary","PageIndex":2,"FileName":"CoverageMap.x","AWSAccountPageId":32082717,"HasChildren":0,"Indent":false},{"DisplayPageName":"Appraiser ethics","PageURL":"Appraiserethics","Parent":"0","Location":"Secondary","PageIndex":3,"FileName":"Ethics.x","AWSAccountPageId":33686853,"HasChildren":1,"Indent":false},{"DisplayPageName":"Mortgage Calculators","PageURL":"MortgageCalculators","Parent":"0","Location":"Secondary","PageIndex":4,"FileName":"MortgageCalculator.x","AWSAccountPageId":32082710,"HasChildren":1,"Indent":false},{"DisplayPageName":"Inspection Report Tips","PageURL":"InspectionReportTips","Parent":"0","Location":"Secondary","PageIndex":5,"FileName":"inspection.x","AWSAccountPageId":31309406,"HasChildren":0,"Indent":false},{"DisplayPageName":"Estate Appraisals","PageURL":"EstateAppraisals","Parent":"0","Location":"Secondary","PageIndex":6,"FileName":"estate.x","AWSAccountPageId":31309399,"HasChildren":1,"Indent":false},{"DisplayPageName":"Foreclosure/REO Appraisal","PageURL":"Foreclosure/REOAppraisal","Parent":"0","Location":"Secondary","PageIndex":7,"FileName":"Foreclosure.x","AWSAccountPageId":33686863,"HasChildren":0,"Indent":false},{"DisplayPageName":"Mfg vs Modular Homes","PageURL":"MfgvsModularHomes","Parent":"0","Location":"Secondary","PageIndex":8,"FileName":"MfgvsModularHomes.x","AWSAccountPageId":36532809,"HasChildren":0,"Indent":false},{"DisplayPageName":"Our Technology","PageURL":"OurTechnology","Parent":"0","Location":"Secondary","PageIndex":9,"FileName":"technology.x","AWSAccountPageId":31309395,"HasChildren":0,"Indent":false},{"DisplayPageName":"Why get an Appraisal","PageURL":"WhygetanAppraisal","Parent":"0","Location":"Secondary","PageIndex":10,"FileName":"whyget.x","AWSAccountPageId":31309390,"HasChildren":0,"Indent":false},{"DisplayPageName":"Staff Profiles","PageURL":"StaffProfiles","Parent":"0","Location":"Secondary","PageIndex":13,"FileName":"staffprofiles.x","AWSAccountPageId":31309391,"HasChildren":0,"Indent":false},{"DisplayPageName":"Press Release","PageURL":"PressRelease","Parent":"0","Location":"Secondary","PageIndex":14,"FileName":"press.x","AWSAccountPageId":31309410,"HasChildren":0,"Indent":false},{"DisplayPageName":"REAS Privacy Policy","PageURL":"PrivacyProcedures","Parent":"0","Location":"Secondary","PageIndex":15,"FileName":"CustomPage1.x","AWSAccountPageId":78669540,"HasChildren":0,"Indent":false},{"DisplayPageName":"REAS Terms of Use","PageURL":"reastermsofuse","Parent":"0","Location":"Secondary","PageIndex":17,"FileName":"CustomPage2.x","AWSAccountPageId":78669544,"HasChildren":0,"Indent":false},{"DisplayPageName":"Social Media Guidelines","PageURL":"socialmediaguidelines","Parent":"0","Location":"Secondary","PageIndex":18,"FileName":"CustomPage4.x","AWSAccountPageId":78669546,"HasChildren":0,"Indent":false},{"DisplayPageName":"Third Party Sites","PageURL":"thirdpartysites","Parent":"0","Location":"Secondary","PageIndex":19,"FileName":"CustomPage3.x","AWSAccountPageId":78669545,"HasChildren":0,"Indent":false},{"DisplayPageName":"Date of Death Valuations","PageURL":"DateofDeathValuations","Parent":"estate.x","Location":"Child","PageIndex":1,"FileName":"DeathValuations.x","AWSAccountPageId":33686861,"HasChildren":0,"Indent":false},{"DisplayPageName":"Appraiser licensing","PageURL":"Appraiserlicensing","Parent":"Ethics.x","Location":"Child","PageIndex":1,"FileName":"Licensing.x","AWSAccountPageId":33686855,"HasChildren":0,"Indent":false},{"DisplayPageName":"Appraisal Myths","PageURL":"AppraisalMyths","Parent":"Ethics.x","Location":"Child","PageIndex":2,"FileName":"myths.x","AWSAccountPageId":31309400,"HasChildren":0,"Indent":false},{"DisplayPageName":"FHA Approved","PageURL":"FHAApproved","Parent":"MortgageCalculator.x","Location":"Child","PageIndex":1,"FileName":"FHAApproved.x","AWSAccountPageId":57520284,"HasChildren":0,"Indent":false}];
+            var strAccountData = [{"AWSAccountsID":28216,"SiteName":"reasinc","AWSAccountTypeID":1,"LevelId":102,"HasWebsite":true,"AccountType":"Appraisers","ThemeFamily":"Mobile-Friendly","Phone":"(828) 466-5037","DisplayOfficePhone":true,"Fax":"(828) 466-5039","DisplayOfficeFax":true,"Pager":"","DisplayPrimaryPager":false,"Cell":"","DisplayPrimaryCell":false,"DisplayPrimaryEmail":true,"DisplayCompName":1,"DisplayLogo":1,"DisplayPhoto":null,"CompanyLogoURL":"/XSites/Appraisers/reasinc/logo47682.jpg","CompanyName":"<b><font color='#000000' size='20' face='Tahoma'>Real%20Estate%20Advisory%20Services%2C%20Inc</font></b>","CompanyTagline":"","RevisionCount":5910,"PortraitURL":"/XSites/Appraisers/reasinc/portrait54006.JPG","DisplayPortrait":1,"bgImageURL":"/graphics/ProvidedBGImages/meadow2.jpg","BGColorHex":"","AWSHeaderBackgroundPath":"/graphics/StockBackgrounds/customerfocus/IS_74727279.jpg"}];
+
+        </script>
+        
+        <script src="./12_files/layout.js.download"></script>
+
+    
+
+<div id="dialog"></div>
+
+<script src="./12_files/saved_resource"></script>
+<script type="text/javascript" src="./12_files/jquery-1.8.3.min.js.download"></script>
+<script src="./12_files/jquery-ui.min.js.download"></script>
+<script type="text/javascript" src="./12_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" nonce="">
+jQuery.curCSS = function(element, prop, val) {
+    return jQuery(element).css(prop, val);
+};
+
+
+try {
+    getFCMap();
+} catch (ex) {}
+
+function showPage(url) {
+    document.getElementById('divContent').style.display = "none";
+    document.getElementById('divIDXSearch').style.display = "block";
+    var frameVar = document.getElementById('frameIDXSearch')
+    frameVar.style.display = "block";
+    frameVar.src = url;
+}
+
+$(document).ready(function () {
+    if ('True' === "False" && sessionStorage.getItem('TLSWarningShown') === '0') {
+        alert("Your browser is currently using an unsafe version of TLS. For your information security, please update to the latest version of your browser, or use a different browser.");
+        sessionStorage.setItem('TLSWarningShown', '1');
+    }
+    if ('' != "") {
+        //var form = 'http://reasinc.com';
+        var form = '';
+        console.log(form);
+
+        $("#dialog").load(form).dialog({
+            modal: true,
+            width: '100%',
+            //height: 750,
+            //draggable: false,
+            //resizable: false,
+            closeOnEscape: false,
+            open: function () { $(".canvas").addClass("blur"); $(".xs-main-container").addClass("blur"); $("html").addClass("doorway"); },
+            close: function () { $(".canvas").removeClass("blur"); $(".xs-main-container").removeClass("blur"); $("html").removeClass("doorway"); }
+        });
+        $('.ui-dialog').css({ top: '50px' });
+    }
+
+});
+</script>
+
+<!--</form>--></body></html>
